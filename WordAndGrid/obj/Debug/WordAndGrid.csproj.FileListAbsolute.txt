@@ -1,0 +1,9 @@
+C:\PersonalProjects\WordAndGrid\WordAndGrid\bin\Debug\WordAndGrid.exe.config
+C:\PersonalProjects\WordAndGrid\WordAndGrid\bin\Debug\WordAndGrid.exe
+C:\PersonalProjects\WordAndGrid\WordAndGrid\bin\Debug\WordAndGrid.pdb
+C:\PersonalProjects\WordAndGrid\WordAndGrid\obj\Debug\WordAndGrid.csprojResolveAssemblyReference.cache
+C:\PersonalProjects\WordAndGrid\WordAndGrid\obj\Debug\WordAndGrid.Form1.resources
+C:\PersonalProjects\WordAndGrid\WordAndGrid\obj\Debug\WordAndGrid.Properties.Resources.resources
+C:\PersonalProjects\WordAndGrid\WordAndGrid\obj\Debug\WordAndGrid.csproj.GenerateResource.Cache
+C:\PersonalProjects\WordAndGrid\WordAndGrid\obj\Debug\WordAndGrid.exe
+C:\PersonalProjects\WordAndGrid\WordAndGrid\obj\Debug\WordAndGrid.pdb
