@@ -59,6 +59,37 @@ namespace WordAndGrid
             lblStatus.Text = "All Done";
         }
 
+        private void placeWordDiagnolly(string word, int row, int col)
+        {
+            //figure out if there are sufficient spots available horizontally and vertically
+            int wordLength = word.ToCharArray().Length;
+            int numOfSpots = dataGridView1.ColumnCount - col;
+            if (wordLength > numOfSpots)
+            {
+                //word is too long
+                lblStatus.ForeColor = Color.Red;
+                lblStatus.Text = "Word is too long";
+                return;
+            }
+            numOfSpots = dataGridView1.RowCount - row;
+            if (wordLength > numOfSpots)
+            {
+                //word is too long
+                lblStatus.ForeColor = Color.Red;
+                lblStatus.Text = "Word is too long";
+                return;
+            }
+            //place the word horizontally (left to right)
+            char[] wArray = word.ToCharArray();
+            for (int i = 0; i < wArray.Length; i++)
+            {
+                dataGridView1.Rows[row + i].Cells[col + i].Value = wArray[i];
+                dataGridView1.Rows[row + i].Cells[col + i].Style.ForeColor = Color.Red;
+                dataGridView1.Rows[row + i].Cells[col + i].Style.Font = new Font(dataGridView1.Font, FontStyle.Bold);
+                dataGridView1.Refresh();
+            }
+        }
+
 
         private void placeWordHoriz(string word, int row, int col)
         {
@@ -120,10 +151,15 @@ namespace WordAndGrid
                 //Vertically alligned
                 placeWordVert(word, y, x);
             }
-            else
+            else if (align == 0)
             {
                 //Horizontally alligned
                 placeWordHoriz(word, y, x);
+            }
+            else
+            {
+                //Diagonally
+                placeWordDiagnolly(word, y, x);
             }
             textBox1.Text = "";
             ddlAlign.SelectedIndex = -1;

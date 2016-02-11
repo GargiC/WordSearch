@@ -84,7 +84,8 @@
             this.ddlAlign.FormattingEnabled = true;
             this.ddlAlign.Items.AddRange(new object[] {
             "Horizontal",
-            "Vertical"});
+            "Vertical",
+            "Diagonal"});
             this.ddlAlign.Location = new System.Drawing.Point(131, 52);
             this.ddlAlign.Name = "ddlAlign";
             this.ddlAlign.Size = new System.Drawing.Size(121, 21);
