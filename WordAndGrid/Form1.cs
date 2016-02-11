@@ -13,6 +13,7 @@ namespace WordAndGrid
 {
     public partial class Form1 : Form
     {
+        protected static readonly int gridLengthSize = 15;
         public Form1()
         {
             InitializeComponent();
@@ -27,11 +28,11 @@ namespace WordAndGrid
 
             dataGridView1.ColumnHeadersVisible = false;
             dataGridView1.RowHeadersVisible = false;
-            for(int i=0; i<15; i++)
+            for(int i=0; i< gridLengthSize; i++)
             {
                 dataGridView1.Columns.Add("Col" + i.ToString(), "");
             }
-            dataGridView1.Rows.Add(15);
+            dataGridView1.Rows.Add(gridLengthSize);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
@@ -79,7 +80,7 @@ namespace WordAndGrid
                 lblStatus.Text = "Word is too long";
                 return;
             }
-            //place the word horizontally (left to right)
+            //place the word diagonally downwards
             char[] wArray = word.ToCharArray();
             for (int i = 0; i < wArray.Length; i++)
             {
@@ -158,7 +159,7 @@ namespace WordAndGrid
             }
             else
             {
-                //Diagonally
+                //Diagonally aligned
                 placeWordDiagnolly(word, y, x);
             }
             textBox1.Text = "";
